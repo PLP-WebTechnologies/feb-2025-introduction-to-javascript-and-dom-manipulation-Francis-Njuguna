@@ -1,0 +1,115 @@
+.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-2px);
+        }
+
+        button {
+            background-color: #4f46e5;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+
+        button:hover {
+            background-color: #4338ca;
+        }
+
+        .highlight {
+            background-color: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #4b5563;
+        }
+
+        .dynamic-element {
+            background-color: #e0f2fe;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            border-left: 4px solid #3b82f6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="mainTitle">Interactive DOM Demo</h1>
+    </header>
+
+    <main>
+        <section id="textSection">
+            <h2>Text Manipulation</h2>
+            <p id="dynamicText">Click the button below to see dynamic text changes!</p>
+            <button onclick="changeText()">Change Text</button>
+        </section>
+
+        <section id="styleSection">
+            <h2>Style Changes</h2>
+            <p id="styleText">Click to toggle highlight effect on this text.</p>
+            <button onclick="changeStyle()">Toggle Style</button>
+        </section>
+
+        <section id="elementSection">
+            <h2>Element Toggle</h2>
+            <div id="elementContainer">
+                <p>Click the button to add or remove elements dynamically.</p>
+            </div>
+            <button onclick="toggleElement()">Toggle Element</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
